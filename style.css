@@ -649,7 +649,7 @@ span {
 @media screen and (max-width: 576px) {
   .conteudo-geral-sliderGeral {
     --larguraDoItem: 100px;
-    --alturaDoItem: 80px;
+    --alturaDoItem: 150px;
   }
 
   .conteudo-geral iframe {
