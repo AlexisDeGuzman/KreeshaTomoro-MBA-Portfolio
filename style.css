@@ -646,6 +646,21 @@ span {
   }
 }
 
+@media screen and (max-width: 576px) {
+  .conteudo-geral-sliderGeral {
+    --larguraDoItem: 100px;
+    --alturaDoItem: 80px;
+  }
+
+  .conteudo-geral iframe {
+  	width: 50%,
+  	height: 50px;
+  	overflow: hidden;
+  }
+}
+
+
+
 /*cas2*/
 
 /* Slideshow container */
