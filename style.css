@@ -541,127 +541,15 @@ span {
 	}
 }
 
+/*carousel*/
 
-
-/*Cassianosch slider*/
-
-.conteudo-geral {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin:  auto;
-}
-
-.conteudo-geral-sliderGeral {
-  --larguraDoItem: 150px;
-  --alturaDoItem: 100px;
-  width: var(--larguraDoItem);
-  height: var(--alturaDoItem);
-  perspective: 1000px;
-}
-
-.sliderGeral {
-  --rotatey: 0;
-  font-size: 4rem;
-  position: relative;
-  transform: rotatey(var(--rotatey));
-  transform-style: preserve-3d;
-  user-select: none;
-  cursor: grab;
-}
-
-.sliderGeral-card {
-  opacity: 0.97;
-  position: absolute;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 5px;
-  transition: opacity 0.5s;
-}
-
-.sliderGeral-card:hover {
-  opacity: 1;
-}
-.sliderGeral-card h1 {
-  color: #fff;
-  font-size: 1.8rem;
-}
-
-.sliderGeral,
-.sliderGeral-card {
-  width: 100%;
-  height: 100%;
-}
-
-.kc {
+.mySlides1, .mySlides2, .mySlides3 {
+	display: none;
 	text-align: center;
 }
 
-.projects h3 {
-	font-size: 3.2rem;
-	font-weight: 700; /*thickness of the font*/
-	display: inline;
-}
 
-.sliderGeral-card:nth-child(1) {
-  --rotatey: 0;
-  transform: rotatey(var(--rotatey)) translatez(var(--tz));
-  background: linear-gradient(-229deg, #0093e9, #80d0c7);
-}
-
-.sliderGeral-card:nth-child(2) {
-  --rotatey: 0;
-  transform: rotatey(var(--rotatey)) translatez(var(--tz));
-  background: linear-gradient(-229deg, #00dbde, #fc00ff);
-}
-
-.sliderGeral-card:nth-child(3) {
-  --rotatey: 0;
-  transform: rotatey(var(--rotatey)) translatez(var(--tz));
-  background: linear-gradient(-229deg, #50d990, #d4d054);
-}
-.sliderGeral-card:nth-child(4) {
-  --rotatey: 0;
-  transform: rotatey(var(--rotatey)) translatez(var(--tz));
-  background: linear-gradient(-229deg, #cf91ff, #5782f5);
-}
-
-.sliderGeral-card:nth-child(5) {
-  --rotate: 0;
-  transform: rotatey(var(--rotatey)) translatez(var(--tz));
-  background: linear-gradient(-229deg, #642b73, #c6426e);
-}
-
-.sliderGeral-card:nth-child(6) {
-  --rotatey: 0;
-  transform: rotatey(var(--rotatey)) translatez(var(--tz));
-  background: linear-gradient(-229deg, #d9afd9, #97d9e1);
-}
-
-@media screen and (min-width: 576px) {
-  .conteudo-geral-sliderGeral {
-    --larguraDoItem: 250px;
-    --alturaDoItem: 200px;
-  }
-}
-
-@media screen and (max-width: 576px) {
-  .conteudo-geral-sliderGeral {
-    --larguraDoItem: 100px;
-    --alturaDoItem: 150px;
-  }
-
-  .conteudo-geral iframe {
-  	width: 50%,
-  	height: 50px;
-  	overflow: hidden;
-  }
-}
-
-
-
-/*cas2*/
+img {vertical-align: middle;}
 
 /* Slideshow container */
 .slideshow-container {
@@ -670,21 +558,14 @@ span {
   margin: auto;
 }
 
-/* Hide the images by default */
-.mySlides {
-  display: none;
-  text-align: center;
-  margin-top: 15rem;
-}
-
 /* Next & previous buttons */
 .prev, .next {
   cursor: pointer;
   position: absolute;
   top: 50%;
   width: auto;
-  margin-top: -22px;
   padding: 16px;
+  margin-top: -22px;
   color: white;
   font-weight: bold;
   font-size: 18px;
@@ -699,218 +580,49 @@ span {
   border-radius: 3px 0 0 3px;
 }
 
-/* On hover, add a black background color with a little bit see-through */
+/* On hover, add a grey background color */
 .prev:hover, .next:hover {
-  background-color: var(--bg-color);
+  background-color: #f1f1f1;
+  color: black;
 }
 
-/* Caption text */
-.text {
-  color: #f2f2f2;
-  font-size: 15px;
-  padding: 8px 12px;
-  position: absolute;
-  bottom: 8px;
-  width: 100%;
-  text-align: center;
+/*vids*/
+.kc {
+	text-align: center;
+	font-size: 3.2rem;
+	font-weight: 700;
 }
 
-/* Number text (1/3 etc) */
-.numbertext {
-  color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
+.mySlides1 img,
+.mySlides3 img {
+	height: 40%;
+	max-height: 400px;
+	max-width: 80%;
 }
 
-/* The dots/bullets/indicators */
-.dot {
-  cursor: pointer;
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
+.vids {
+	text-align: center;
 }
 
-/*.active, .dot:hover {
-  background-color: #717171;
-}*/
-
-/* Fading animation */
-.fade {
-  animation-name: fade;
-  animation-duration: 1.5s;
+.vids iframe, iframe {
+	margin: 1.5rem 0;
+	height: 60vh;
+	max-height: 400px;
+	width: 70%;
 }
 
-@keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
-}
-
-.mySlides iframe {
-  border-radius: 10px; /* Adjust the value as needed */
-}
-
-/*2ND SLIDE*/
-/* CSS */
-.slideshow-container-new {
-  max-width: 1000px;
-  position: relative;
-  margin: auto;
-}
-
-.mySlides-new {
-  display: none;
-  text-align: center;
-  margin-top: 15rem;
-}
-
-.prev-new, .next-new {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  margin-top: -22px;
-  padding: 16px;
-  color: white;
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
-}
-
-.next-new {
-  right: 0;
-  border-radius: 3px 0 0 3px;
-}
-
-.prev-new:hover, .next-new:hover {
-  background-color: var(--bg-color);
-}
-
-.text-new {
-  color: #f2f2f2;
-  font-size: 15px;
-  padding: 8px 12px;
-  position: absolute;
-  bottom: 8px;
-  width: 100%;
-  text-align: center;
-}
-
-.numbertext-new {
-  color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
-}
-
-.dot-new {
-  cursor: pointer;
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
-}
-
-.fade-new {
-  animation-name: fade;
-  animation-duration: 1.5s;
-}
-
-.mySlides-new iframe {
-  border-radius: 10px; /* Adjust the value as needed */
-}
-
-/*slideshow 2*/
-/* Position the image container (needed to position the left and right arrows) */
-.container {
-  position: relative;
-}
-
-/* Hide the images by default */
-.mySlides {
-  display: none;
-}
-
-/* Add a pointer when hovering over the thumbnail images */
-.cursor {
-  cursor: pointer;
-}
-
-/* Next & previous buttons */
-.prev,
 .next {
-  cursor: pointer;
-  position: absolute;
-  top: 40%;
-  width: auto;
-  padding: 16px;
-  margin-top: -50px;
-  color: white;
-  font-weight: bold;
-  font-size: 20px;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
-  -webkit-user-select: none;
+    right: 10vmin;
 }
 
-/* Position the "next button" to the right */
-.next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
+.prev {
+	left: 10vmin;
 }
 
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover,
-.next:hover {
-  background-color: var(--bg-color);
-}
-
-/* Number text (1/3 etc) */
-.numbertext {
-  color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
-}
-
-/* Container for image text */
-.caption-container {
-  text-align: center;
-  background-color: #222;
-  padding: 2px 16px;
-  color: white;
-}
-
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-/* Six columns side by side */
-.column {
-  float: left;
-  width: 16.66%;
-}
-
-/* Add a transparency effect for thumnbail images */
-.demo {
-  opacity: 0.6;
-}
-
-.active,
-.demo:hover {
-  opacity: 1;
+.pda,
+.mkt {
+	text-align: center;
+	font-size: 3.2rem;
+	font-weight: 700;
+	margin-top: 3rem;
 }
