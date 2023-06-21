@@ -172,7 +172,7 @@ span {
 	box-shadow: none;
 }
 
-.about {
+.about{
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -328,50 +328,6 @@ span {
 	color: var(--second-bg-color);
 }
 
-
-
-.contact h2 {
-	margin-bottom: 3rem;
-}
-
-.contact form {
-	max-width: 70rem;
-	margin: 1rem auto;
-	text-align: center;
-	margin-bottom: 3rem;
-}
-
-.contact form .input-box {
-	display: flex;
-	justify-content: space-between;
-	flex-wrap: wrap;
-}
-
-.contact form .input-box input,
-.contact form textarea {
-	width: 100%;
-	padding: 1.5rem;
-	font-size: 1.6rem;
-	color: var(--text-color);
-	background: var(--second-bg-color);
-	border-radius: .8rem;
-	margin: .7rem 0;
-}
-
-.contact form .input-box input {
-	width: 49%;
-}
-
-.contact form textarea {
-	resize: none; /*removes the ability of the textarea to resize*/
-}
-
-.contact form .btn {
-	margin-top: 2rem;
-	cursor: pointer;
-}
-
-
 .footer {
 	display: flex;
 	justify-content: space-between;
@@ -501,6 +457,10 @@ span {
 	.projects-container {
 		grid-template-columns: repeat(2, 1fr);
 	}
+
+	.contact {
+			flex-direction: column;
+	}
 }
 
 
@@ -626,3 +586,30 @@ img {vertical-align: middle;}
 	font-weight: 700;
 	margin-top: 3rem;
 }
+
+.contact {
+	display: flex;
+	justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  background: var(--bg-color);
+} 
+
+.contact-content {
+	vertical-align: center;
+}
+
+.contact-content h2 { /*About Me*/
+	text-align: left;
+	line-height: 1.2; /*para bumaba yung contents sa baba ng heading*/
+}
+
+.contact-content h3 { /*fullstack developer*/
+	font-size: 2.6rem; 
+}
+
+.contact-content p {
+	font-size: 1.6rem;
+	margin: 2rem 0 3rem; /*top,right-left,bottom margin*/
+}
+
